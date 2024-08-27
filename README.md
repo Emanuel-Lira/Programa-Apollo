@@ -11,6 +11,7 @@ O programa Apollo foi uma série de missões espaciais conduzidas pela NASA que 
 - **index.html**: Página principal do projeto, apresentando a visão geral das missões Apollo.
 - **sobre.html**: Página dedicada à seção "Sobre", fornecendo uma descrição detalhada das missões Apollo.
 - **style.css**: Arquivo de estilo CSS que define o visual e o layout das páginas.
+- - **reveal.js**: Arquivo JavaScript que define a animação de entrada dos elementos.
 
 ## Tecnologias Utilizadas
 
