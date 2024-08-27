@@ -225,7 +225,7 @@ nav ul li a:active:after {
 .content-sobre h1 {
   font-size: 50px;
   color: #ffffff;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Space Mono', ;
   margin-top: 3rem;
 }
 
@@ -339,6 +339,66 @@ nav ul li a:active:after {
 .efeito-txt-topo, .efeito-p-topo, .card, .content-sobre, .lua{
   visibility: hidden;
   z-index: 2;
+}
+
+
+/* style da galeria */
+.gallery {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 25px;
+}
+
+.gallery img {
+  width: 98%;
+  border-radius: 7px;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo do modal fundo */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+/* Imagem expandida no modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Botão de fechar (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 

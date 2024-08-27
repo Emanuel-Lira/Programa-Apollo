@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <title>Document</title>
-
+  <script src="script.js" defer></script>
+  
+  <title>Galeria</title>
 </head>
 <body>
   <header>
@@ -18,7 +18,36 @@
             <li><a href="Galeria.html">Imagens</a></li>
         </ul>
     </nav>
-</header>
+  </header>
+
+  <main>
+      <section>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+      </section>
+
+    <section class="gallery efeito-img-topo">
+      <img src="https://media.gettyimages.com/id/182663592/pt/foto/astronauta-na-lua.jpg?s=2048x2048&w=gi&k=20&c=dNwTfz3TfN50FbCeBL0MX6QLVr1kYS-QPK4Wp4BHbM4=" alt="">
+      <img src="https://media.gettyimages.com/id/849193/pt/foto/astronaut-david-scott-gives-salute-beside-the-u-s-flag-july-30-1971-on-the-moon-during-the-apollo.jpg?s=2048x2048&w=gi&k=20&c=Y6EJd-f-fo7JF4n80ykvxfFghPy4XiG0UNTgDPkaooQ=" alt="">
+      <img src="https://media.gettyimages.com/id/171206191/pt/foto/cabo-canaveralcity-in-florida-usa.jpg?s=2048x2048&w=gi&k=20&c=2kPpafRfuxjX-9NmZaYBMlER-Zi-1lSTJez7w7lS6qo=" alt="">
+      <img src="https://media.gettyimages.com/id/181827984/pt/foto/february-5-1971-view-of-the-apollo-14-lunar-module-on-the-moon-as-photographed-during-the-first.jpg?s=2048x2048&w=gi&k=20&c=HpSa8181ds3C9xiTjEu3dnWT6BUh5g6WBw_qCO2Pp_Y=" alt="">
+      <img src="https://media.gettyimages.com/id/515987192/pt/foto/cape-kennedy-florida-in-the-launch-control-center-at-complex-34-awaiting-the-liftoff-of-apollo.jpg?s=2048x2048&w=gi&k=20&c=webatO0BBfRsRIF58xDvmjBj0f-VYqbj_wUgboFi7bw=" alt="">
+      <img src="https://www.nasa.gov/wp-content/uploads/2021/08/apollo_17_crew_1_cernan_s71-51308.jpg?resize=819,1024" alt="">
+      <img src="https://media.gettyimages.com/id/1141653922/pt/foto/the-three-crew-members-of-nasas-apollo-11-lunar-landing-mission-pose-for-a-group-portrait-a.jpg?s=2048x2048&w=gi&k=20&c=eoEJa4KCZEiavamdzbF7O2itpJyoLCoWlV0Er23mEmk=" alt="">
+      <img src="https://media.gettyimages.com/id/51098550/pt/foto/astronaut-edwin-e-aldrin-jr-poses-for-a-photograph-beside-the-deployed-flag-of-the-united-states.jpg?s=2048x2048&w=gi&k=20&c=2_hHVulzgj8abdOUf1Vk4kSKbPe0g0Dk64qavZVbp5Q=" alt="">
+      <img src="https://media.gettyimages.com/id/1512723/pt/foto/neil-armstrong-steps-into-history-july-20-1969-by-leaving-the-first-human-footprint-on-the.jpg?s=2048x2048&w=gi&k=20&c=b0YPvavcHScnpZKaOOmBrt2x7eUgUYJI9e89bdlBn4U=" alt="">
+      <img src="https://images-assets.nasa.gov/image/s68-29781/s68-29781~large.jpg?w=1521&h=1920&fit=crop&crop=faces%2Cfocalpoint" alt="">
+      <img src="https://www.nasa.gov/wp-content/uploads/2024/01/moon-landing-l-6-months-1-apollo-1-crew-at-pad-34-jan-17-1967-s67-19770.jpg?resize=1024,853" alt="">
+      <img src="https://images-assets.nasa.gov/image/as11-40-5903/as11-40-5903~large.jpg?w=1920&h=1874&fit=crop&crop=faces%2Cfocalpoint" alt="">
+    </section>
+
+    <!-- Modal para exibir a imagem expandida -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="expandedImg">
+    </div>
+  
+  </main>
   
 </body>
 </html>
