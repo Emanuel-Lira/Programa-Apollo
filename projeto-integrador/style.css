@@ -10,16 +10,15 @@ body {
   background-color: #000; 
   overflow-x: hidden; 
 }
-
+ /* estilização do menu/header */
 header {
   background-color: rgba(0, 0, 0, 0.7);
   color: #ffffff;
-  position: relative;
   top: 0;
   left: 0;
   right: 0;
   height: auto;
-  z-index: 10;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +33,6 @@ nav ul {
   padding: 0;
   margin: 0;
   font-family: 'Space Mono', monospace;
-
 }
 
 
@@ -78,7 +76,9 @@ nav ul li a:hover:after {
 nav ul li a:active:after {
   top: 2px;
 }
+/* fim da estilização do menu */
 
+/* inicio do background estrelado */
 .stars {
   background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
   width: 100%;
@@ -105,6 +105,8 @@ nav ul li a:active:after {
   100% { background-position: -10000px 5000px; }
 }
 
+
+/* estilização do Home */
 .content {
   display: flex;
   align-items: center;
@@ -114,6 +116,13 @@ nav ul li a:active:after {
   position: relative;
   z-index: 2;
   max-width: 80%;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Layout em coluna para telas pequenas */
+    align-items: flex-start;
+    margin: 60px auto 20px auto;
+  }
 }
 
 .content h1 {
@@ -127,8 +136,13 @@ nav ul li a:active:after {
   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 60px; /* Reduz o tamanho do texto em telas menores */
+  }
+}
 
-
+/* animação de escrita */
 @keyframes animaTexto{
     0% {
       width: 0;
@@ -137,6 +151,32 @@ nav ul li a:active:after {
       width: 15ch; 
     }
   
+  }
+
+  :root {
+    --px: 1px;
+    --grey: #ccc;
+    --moon-animation-time: 30s;
+  }
+  
+  .lua {
+    margin-top: 11rem;
+    background-color: var(--grey);
+    height: calc(300 * var(--px));
+    width: calc(300 * var(--px));
+    border-radius: 50%;
+    box-shadow: 0px 0px calc(90 * var(--px)) calc(5 * var(--px)) #fff;
+    background-image: url("https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg");
+    background-size: calc(600 * var(--px));
+    background-position: left;
+    background-repeat: no-repeat;
+    animation: animation var(--moon-animation-time) linear infinite;
+  }
+  
+  @keyframes animation {
+    to {
+        background-position: right;
+    }
   }
 
 .paragrafo-home p {
@@ -149,7 +189,16 @@ nav ul li a:active:after {
   text-align: justify;
   font-family: 'Space Mono', monospace;
 }
+@media (max-width: 768px) {
+  .paragrafo-home p {
+    margin-left: 0; 
+    max-width: 100%; 
+    padding: 10px;
+  }
+}
 
+
+/* inicio de estilização da aba MISSOES */
 .content-sobre {
   display: flex;
   align-items: center;
@@ -160,6 +209,18 @@ nav ul li a:active:after {
   margin-left: 450px;
 }
 
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+  }
+
+  .content-sobre {
+      margin-left: 0;
+  }
+  
+}
 
 .content-sobre h1 {
   font-size: 50px;
@@ -176,32 +237,6 @@ nav ul li a:active:after {
   max-width: 1200px; 
   margin: 0 auto; 
   z-index: 10; 
-}
-
-:root {
-  --px: 1px;
-  --grey: #ccc;
-  --moon-animation-time: 30s;
-}
-
-.lua {
-  margin-top: 11rem;
-  background-color: var(--grey);
-  height: calc(300 * var(--px));
-  width: calc(300 * var(--px));
-  border-radius: 50%;
-  box-shadow: 0px 0px calc(90 * var(--px)) calc(5 * var(--px)) #fff;
-  background-image: url("https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg");
-  background-size: calc(600 * var(--px));
-  background-position: left;
-  background-repeat: no-repeat;
-  animation: animation var(--moon-animation-time) linear infinite;
-}
-
-@keyframes animation {
-  to {
-      background-position: right;
-  }
 }
 
 .card {
@@ -253,13 +288,13 @@ nav ul li a:active:after {
 
 .btn-13 {
   
-  background-image: linear-gradient(315deg, #1a1a1a 0%, #2e2e2e 74%);
+  background-image: linear-gradient(315deg, #1a1a1a93 0%, #64646494 74%);
   border: none;
   z-index: 1;
   position: relative;
   padding: 10px 20px; 
   border-radius: 5px; 
-  overflow: hidden; 
+  overflow: hidden; /* cortar o conteudo se não couber na caixa */
   font-size: 16px; 
   text-align: center; 
   text-decoration: none; 
@@ -284,7 +319,7 @@ nav ul li a:active:after {
     -4px -4px 5px 0px #fff9,
     7px 7px 20px 0px #0002,
     4px 4px 5px 0px #0001;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .btn-13:hover {
@@ -300,7 +335,7 @@ nav ul li a:active:after {
   top: 2px;
 }
 
-
+/* tirando a visibilidade para usar javaScript */
 .efeito-txt-topo, .efeito-p-topo, .card, .content-sobre, .lua{
   visibility: hidden;
   z-index: 2;

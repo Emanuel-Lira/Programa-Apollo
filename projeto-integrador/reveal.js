@@ -30,3 +30,5 @@ revelar.reveal('.card',
     distance: '90px',
     delay: 500
 });
+
+
