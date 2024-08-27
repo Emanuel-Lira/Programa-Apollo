@@ -4,7 +4,7 @@ Bem-vindo ao projeto sobre as Missões Apollo! Este projeto é uma página da we
 
 ## Visão Geral
 
-O programa Apollo foi uma série de missões espaciais conduzidas pela NASA que resultaram na primeira chegada de seres humanos à Lua. Este projeto visa fornecer uma visão detalhada e educativa sobre essas missões, destacando suas realizações e impacto histórico.
+O programa Apollo foi uma série de missões espaciais conduzidas pela NASA que resultaram na primeira chegada de seres humanos à Lua. Este projeto visa fornecer uma visão detalhada sobre essas missões.
 
 ## Estrutura do Projeto
 
