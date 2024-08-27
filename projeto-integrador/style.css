@@ -1,10 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -15,11 +13,10 @@ body {
   overflow-x: hidden; 
 }
 
-
 header {
   background-color: rgba(0, 0, 0, 0.7);
   color: #ffffff;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -29,9 +26,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  
 }
-
 
 nav ul {
   list-style: none;
@@ -40,12 +35,10 @@ nav ul {
   padding: 0;
   margin: 0;
   font-family: 'Space Mono', monospace;
-  
 }
 
 nav ul li {
   position: relative;
-  
 }
 
 nav ul li a {
@@ -58,36 +51,31 @@ nav ul li a {
   overflow: hidden;
   z-index: 1;
   transition: color 0.3s ease;
-
-  
 }
 
 /* Efeito aplicado ao :after */
 nav ul li a:after {
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
   background: #383637;
-  box-shadow:
-  -1px -1px 5px 0px #fff,
-  7px 7px 20px 0px #0003,
-  4px 4px 5px 0px #0002;
-  transition:400ms ease all;
+  box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
 }
 
 /* Efeito hover */
 nav ul li a:hover {
   color: #383637;
   background: transparent;
-  box-shadow:none;
+  box-shadow: none;
 }
 
 nav ul li a:hover:after {
-  width:100%;
-  transition:800ms ease all;
+  width: 100%;
+  transition: 800ms ease all;
 }
 
 /* Efeito active */
@@ -99,11 +87,9 @@ nav ul li a:active:after {
   background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 0;
 }
 
@@ -111,13 +97,10 @@ nav ul li a:active:after {
   background: url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 1;
-  
   animation: move-twink-back 200s linear infinite;
 }
 
@@ -125,7 +108,6 @@ nav ul li a:active:after {
   0% { background-position: 0 0; }
   100% { background-position: -10000px 5000px; }
 }
-
 
 .content {
   display: flex;
@@ -149,9 +131,8 @@ nav ul li a:active:after {
   height: auto;
   border-radius: 10px;
   margin-top: 8rem;
-
-
 }
+
 
 .paragrafo-home p {
   font-size: 18px;
@@ -163,4 +144,130 @@ nav ul li a:active:after {
   margin-left: 12rem;
   text-align: justify;
   font-family: 'Space Mono', monospace;
+}
+
+
+.content-sobre {
+  display: flex;
+  align-items: center;
+  margin: 100px auto 30px auto; 
+  gap: 3px;
+  position: relative;
+  z-index: 2;
+  margin-left: 450px;
+  
+}
+
+
+.content-sobre h1 {
+  font-size: 50px;
+  color: #ffffff;
+  font-family: 'Space Mono', monospace;
+  margin-top: 3rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  position: relative;  
+  z-index: 10; 
+}
+
+.card {
+  width: 300px; 
+  background-color: #38363736;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  position: relative; 
+  z-index: 10; 
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column; /* Faz com que os elementos dentro do card sejam organizados em coluna */
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  height: 13rem;
+}
+
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-family: 'Space Mono', monospace;
+}
+
+.card-content p {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 30px;
+  font-family: 'Space Mono', monospace;
+  flex-grow: 1;
+  
+}
+
+.btn-13 {
+  
+  background-image: linear-gradient(315deg, #1a1a1a 0%, #2e2e2e 74%);
+  border: none;
+  z-index: 1;
+  position: relative;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  overflow: hidden; 
+  font-size: 16px; 
+  text-align: center; 
+  text-decoration: none; 
+  color: #fff; 
+  transition: color 0.3s ease; 
+  margin-top: 23px;
+}
+
+.btn-13:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #000000 0%, #002b36 74%);
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+
+.btn-13:hover {
+  color: #fff;
+}
+
+.btn-13:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.btn-13:active {
+  top: 2px;
 }
