@@ -17,5 +17,6 @@ O programa Apollo foi uma série de missões espaciais conduzidas pela NASA que 
 
 - **HTML5**: Estruturação do conteúdo da página.
 - **CSS3**: Estilização e design das páginas.
+- **JavaScript**: Animações de entrada dos elementos da página.
 
 
