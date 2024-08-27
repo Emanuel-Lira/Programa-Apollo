@@ -1,5 +1,5 @@
 
-console.log("Script carregado com sucesso!");
+console.log("Script carregado!");
 
 var modal = document.getElementById("imageModal");
 var modalImg = document.getElementById("expandedImg");

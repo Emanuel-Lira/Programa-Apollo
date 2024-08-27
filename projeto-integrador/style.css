@@ -104,7 +104,7 @@ nav ul li a:active:after {
   0% { background-position: 0 0; }
   100% { background-position: -10000px 5000px; }
 }
-
+/* fim do background */
 
 /* estilização do Home */
 .content {
